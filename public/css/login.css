@@ -1,0 +1,34 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  align-items: center;
+  width: 500px;
+  height: 320px;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px #333;
+  background: #fefefe;
+}
+.content > *{
+  margin: 5px 0;
+}
+.logo{
+  width: 200px;
+  height:50px;
+}
+.v5w{
+  width: 100%;
+  height: auto;
+}
+.login-form{
+  width: 250px;
+}
+.login-form > *{
+  margin: 8px 0px;
+}

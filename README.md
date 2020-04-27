@@ -1,7 +1,7 @@
 # Red-Things
 IOT(Internet of things) platform based on Node-Red, Easy but very useful to built a iot system
 
-Red-Things的项目意义:基于Node-Red技术,快速构建一个简单好用的物联网平台.
+Red-Things项目意义:基于Node-Red技术,快速构建一个简单好用的物联网平台.
 
 # Init project
 > npm install
@@ -60,6 +60,6 @@ you can see the web pages
 # www.v5w.com
 more information in my website: www.v5w.com(威武网)
 
-demonstrate video(演示视屏):
+demonstrate video(演示视频):
 
 https://www.v5w.com/iot/259.html

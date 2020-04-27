@@ -1,6 +1,8 @@
 # Red-Things
 IOT(Internet of things) platform based on Node-Red, Easy but very useful to built a iot system
 
+Red-Things的项目意义:基于Node-Red技术,快速构建一个简单好用的物联网平台.
+
 # Init project
 > npm install
 
@@ -47,7 +49,7 @@ input url in browser: localhost:3000/login
 
 you can see the web pages
 
-![login](https://github.com/xqli82/Red-Things/blob/master/login.png)
+![login](http://www.v5w.com/wp-content/uploads/2020/04/1587838198-d56b699830e77ba.png)
 
 # Interface
 + /login  all url's entry
@@ -56,4 +58,8 @@ you can see the web pages
 + /api    node-red http interface
 
 # www.v5w.com
-more information on my website: www.v5w.com(威武网)
+more information in my website: www.v5w.com(威武网)
+
+demonstrate video(演示视屏):
+
+https://www.v5w.com/iot/259.html

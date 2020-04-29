@@ -47,7 +47,7 @@ node createUser.js username password
 # Test
 input url in browser: localhost:3000/login
 
-you can see the web pages
+you will see the login page
 
 ![login](http://www.v5w.com/wp-content/uploads/2020/04/1587838198-d56b699830e77ba.png)
 

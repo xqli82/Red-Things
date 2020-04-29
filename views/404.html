@@ -1,0 +1,27 @@
+{{extend './base.html'}}
+
+{{block 'content'}}
+<div class='err'>
+    <p>404 error</p>
+    <p>can find the page</p>
+    <a href="/main">回首页</a>
+</div>
+<style>
+    .err{
+        width: 500px;
+        height: 200px;
+        background: #fff;
+        border-radius: 2px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 40px;
+        font-size: 20px;
+        position:absolute;
+        left:50%;
+        top:50%;
+        transform: translateX(-50%) translateY(-50%);
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+</style>
+{{/block}}

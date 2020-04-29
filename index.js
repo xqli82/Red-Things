@@ -60,11 +60,17 @@ app.use(function (err, req, res, next) {
   }
 })
 
+app.all('*', async function (req, res) {
+  await setTimeout(() => {
+    res.render('404.html',{})
+  }, 500);  
+})
+
+
+
 server.listen(userSettings.port, function () {
   console.log(`--------------------------server is running on port:${userSettings.port}--------------------------------`)
 });
-
-server.msg = "server nihao"
 
 // Start the runtime
 RED.start();

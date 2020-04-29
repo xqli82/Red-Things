@@ -1,5 +1,5 @@
 # Red-Things
-IOT(Internet of things) platform based on Node-Red, Easy but very useful to built a iot system
+IOT(Internet of things) platform based on Node-Red, Easy but very useful to built iot system
 
 Red-Things项目意义:基于Node-Red技术,快速构建一个简单好用的物联网平台.
 

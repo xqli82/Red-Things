@@ -20,7 +20,7 @@
 		</div>
 		<div class="password input-group">
 			<span class="iconfont icon-password input-group-addon"></span>
-			<input type="password" placeholder="password" class="form-control" v-model="password">
+			<input type="password" placeholder="password" class="form-control" v-model="password" @keyup.enter='login'>
 		</div>
 		<div style="display: flex; justify-content: space-around;">
 			<span class="btn-sm btn-primary" @click='login'>Login(登录)</span>

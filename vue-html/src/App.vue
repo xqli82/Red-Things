@@ -20,4 +20,7 @@
   #app{
     height: 100vh;
   }
+  a{
+    color: #303133;
+  }
 </style>

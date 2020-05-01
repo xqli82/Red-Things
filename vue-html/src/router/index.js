@@ -25,6 +25,7 @@ const routes = [
     children: [
       { path: 'list', component: () => import('@/views/user/list.vue') },
       { path: 'add', component: () => import('@/views/user/add.vue') },
+      { path: 'group', component: () => import('@/views/user/group.vue') },
     ]
   },
   {

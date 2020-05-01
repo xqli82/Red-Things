@@ -7,6 +7,12 @@ commonRouter.get('/login', function (req, res) {
     })
 })
 
+commonRouter.get('/stack',function(req,res){
+    res.send({
+        stack:req.app.stack
+    })
+})
+
 commonRouter.post('/login', login)
 commonRouter.post('/logout', logout)
 

@@ -6,8 +6,12 @@ const routes = require('./routes')
 const { auth, log } = require('./middleware')
 const cookies = require('cookie-parser')
 const userSettings = require('./user_settings')
+const stackPush = require('./utils/pushParser')
 
 const app = express()
+
+app.stack = []
+app.stackPush = stackPush
 
 app.baseDir = __dirname
 app.use('/static', express.static("public"))
@@ -45,8 +49,11 @@ let settings = {
   functionGlobalContext: {}    // enables global context
 };
 
-// Initialise the runtime with a server and settings
-RED.init(server, settings);
+app.stackPush('all','/red')
+app.stackPush('all','/api')
+
+  // Initialise the runtime with a server and settings
+  RED.init(server, settings);
 
 // Serve the editor UI from /red
 app.use(settings.httpAdminRoot, RED.httpAdmin);
@@ -62,8 +69,8 @@ app.use(function (err, req, res, next) {
 
 app.all('*', async function (req, res) {
   await setTimeout(() => {
-    res.render('404.html',{})
-  }, 500);  
+    res.render('404.html', {})
+  }, 500);
 })
 
 

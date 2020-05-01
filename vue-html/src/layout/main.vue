@@ -32,6 +32,9 @@
             <el-menu-item index="/user/add">
               <i class="el-icon-arrow-right"></i>添加用户
             </el-menu-item>
+            <el-menu-item index="/user/group">
+              <i class="el-icon-arrow-right"></i>用户组管理
+            </el-menu-item>
           </el-menu-item-group>
         </el-submenu>
         <li class="el-submenu">
@@ -78,7 +81,8 @@
   export default {
     data() {
       return {
-        username: ''
+        username: '',
+        stack:null
       }
     },
     methods: {
@@ -95,6 +99,15 @@
       .catch(err=>{
         console.log(err)
       })
+
+      this.$axios.get('/stack')
+      .then(res=> {
+        this.$store.commit('getStack',res.data.stack) 
+      })
+      .catch(err=>{
+        console.log(err)
+      })
+
     },
   };
 </script>

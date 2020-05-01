@@ -1,7 +1,7 @@
 const { User } = require('../models')
 const { decodeToken } = require('../api/jwt')
 
-module.exports = async (req, res, next) => {
+module.exports = async function(req, res, next){
   let token = req.cookies.token
   if (token) {
     let id = decodeToken(token).id

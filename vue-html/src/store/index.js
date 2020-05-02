@@ -12,7 +12,7 @@ export default new Vuex.Store({
     ],
     userGroup: [
       {
-        name: 'test1', level: 0, stack: [
+        name: 'test1', des: '123', stack: [
           { method: 'get', url: '/user' },
           { method: 'get', url: '/user1' },
         ]
@@ -25,7 +25,6 @@ export default new Vuex.Store({
     },
     getGroup(state, group) {
       state.userGroup = group
-      console.log(state.userGroup)
     }
   },
   actions: {
@@ -37,7 +36,16 @@ export default new Vuex.Store({
       }).catch(err => {
         console.log(err)
       })
-
+    },
+    deleteGroup(context,{app,data}){
+      axios.delete('/user/group',{
+        data:data
+      }).then(res=>{
+        if(res.data.code==200){
+          app.$message("删除成功")
+          this.dispatch('getGroup')
+        }
+      })
     }
   },
   modules: {

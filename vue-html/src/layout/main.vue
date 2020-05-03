@@ -1,7 +1,8 @@
 <template>
   <el-container style="height: 500px; border: 1px solid #eee">
     <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
-      <el-menu :default-openeds="['/user','/device']" router>
+      <el-menu :default-openeds="['/user','/device']" router 
+      >
         <li class="el-submenu">
           <div class="el-submenu__title">
             <i class="el-icon-s-home"></i>

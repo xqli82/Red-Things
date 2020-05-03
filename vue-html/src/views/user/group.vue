@@ -20,7 +20,7 @@
         </el-table-column>
       </el-table>
     </div>所有权限列表:
-    <el-table :data="stack" style="width: 100%" :default-sort="{prop:'method'}" stripe border size="small">
+    <el-table :data="this.$store.state.stack" style="width: 100%" :default-sort="{prop:'method'}" stripe border size="small">
       <el-table-column type="index" :index="indexValue" label="序号" width="150" align="center"></el-table-column>
       <el-table-column prop="method" label="Method" width="250" align="center"></el-table-column>
       <el-table-column prop="url" label="URL"></el-table-column>

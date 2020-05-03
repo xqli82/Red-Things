@@ -63,12 +63,24 @@ userRouter.delete('/group',async(req,res)=>{
   try {
     let name = req.body.name
     let status = await Group.deleteOne({name})
-    console.log(status)
     res.send({
       code:200
     })
   } catch (error) {
     console.log(error)
+    res.send({
+      code:500
+    })
+  }
+})
+
+userRouter.put('/group/:name',async(req,res)=>{
+  try {
+    let group = await Group.updateOne({name:req.params.name},req.body)
+    res.send({
+      code:200
+    })
+  } catch (error) {
     res.send({
       code:500
     })

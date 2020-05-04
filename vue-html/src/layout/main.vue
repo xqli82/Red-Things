@@ -34,7 +34,7 @@
               <i class="el-icon-arrow-right"></i>添加用户
             </el-menu-item>
             <el-menu-item index="/user/group">
-              <i class="el-icon-arrow-right"></i>用户组管理
+              <i class="el-icon-arrow-right"></i>权限管理
             </el-menu-item>
           </el-menu-item-group>
         </el-submenu>

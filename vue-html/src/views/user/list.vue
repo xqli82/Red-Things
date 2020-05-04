@@ -70,7 +70,6 @@
         },
         mounted() {
             this.$store.dispatch('user/getUserList', this)
-            this.$store.dispatch('group/getGroups', this)
         },
         methods: {
             editUser(index) {

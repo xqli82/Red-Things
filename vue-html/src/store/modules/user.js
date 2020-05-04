@@ -29,10 +29,28 @@ const actions = {
     updateUser({ dispatch }, { app, user }) {
         app.$http.put(`/user/user/${user._id}`, user)
             .then(res => {
-                console.log(res)
-                app.$message('修改成功！')
-                dispatch('getUserList', app)
+                if(res.code==200){
+                    app.$message('修改成功！')
+                    dispatch('getUserList', app)
+                }
             })
+    },
+    createUser({dispatch},{app,user}){
+        app.$http.post('/user/user',user)
+        .then(res=>{
+            if(res.code==200){
+                app.$message('创建成功')
+                dispatch('getUserList',app)
+            }
+        })
+    },
+    modifyPassword(context,{app,data}){
+        app.$http.post('/user/modify',data)
+        .then(res=>{
+            if(res.code==200){
+                app.$message(res.msg)
+            }
+        })
     }
 }
 

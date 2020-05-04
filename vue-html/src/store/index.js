@@ -3,10 +3,12 @@ import Vuex from 'vuex'
 import axios from 'axios'
 import user from './modules/user'
 import group from './modules/group'
+import getters from './getters'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+  getters,
   state: {
     stack: [
       { method: 'get', url: '/user' },

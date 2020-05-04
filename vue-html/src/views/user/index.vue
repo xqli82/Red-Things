@@ -7,7 +7,9 @@
 </template>
 <script>
     export default {
-       
+        mounted() {
+            this.$store.dispatch('group/getGroups', this)
+        },
     }
 </script>
 <style>

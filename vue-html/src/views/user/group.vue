@@ -165,6 +165,7 @@
                 type: "success"
               });
               this.$store.dispatch('getGroup')
+              this.$store.dispatch('group/getGroups',this)
             } else {
               this.$message({
                 message: "用户组名重复",

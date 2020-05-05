@@ -1,7 +1,7 @@
 <template>
     <div>
         <div>
-           <h4>添加用户</h4> 
+            <h4>添加用户</h4>
             <el-form :label-position="right" label-width="80px" :model="formLabelAlign">
                 <el-form-item label="用户名：">
                     <el-input v-model="user.username"></el-input>
@@ -14,18 +14,19 @@
                 </el-form-item>
                 <el-form-item label="用户组：">
                     <el-select v-model="user.group" placeholder="用户组">
-                        <el-option v-for="(item,index) in this.$store.getters.groups" :key="index" :label="item" :value="item">
+                        <el-option v-for="(item,index) in this.$store.getters.groups" :key="index" :label="item"
+                            :value="item">
                         </el-option>
                     </el-select>
                 </el-form-item>
-    
+
                 <el-form-item>
                     <el-button type="primary" @click="createUser">创建</el-button>
                     <el-button type="danger" @click="reset">重置</el-button>
                 </el-form-item>
             </el-form>
         </div>
-        
+
         <div>
             <h4>重置密码</h4>
             <el-form :label-position="right" label-width="80px" :model="formLabelAlign">
@@ -52,9 +53,9 @@
                     password: '',
                     group: ''
                 },
-                newPassword:{
-                    username:'',
-                    password:''
+                newPassword: {
+                    username: '',
+                    password: ''
                 }
             }
         },
@@ -63,17 +64,16 @@
         },
         methods: {
             createUser() {
-                this.$store.dispatch('user/createUser',{app:this,user:this.user})
+                this.$store.dispatch('user/createUser', { app: this, user: this.user })
             },
-            reset(){
-                this.user.username=''
-                this.user.password=''
-                this.user.nickname=''
-                this.user.group=''
+            reset() {
+                this.user.username = ''
+                this.user.password = ''
+                this.user.nickname = ''
+                this.user.group = ''
             },
-            modifyPassword(){
-                console.log(this.newPassword)
-                this.$store.dispatch('user/modifyPassword',{app:this,data:this.newPassword})
+            modifyPassword() {
+                this.$store.dispatch('user/modifyPassword', { app: this, data: this.newPassword })
             }
         },
     }

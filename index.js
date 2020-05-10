@@ -46,7 +46,8 @@ let settings = {
   httpNodeRoot: "/api",
   userDir: nodePath,
   ui: { path: '/ui' },
-  functionGlobalContext: {}    // enables global context
+  functionGlobalContext: {},    // enables global context
+  credentialSecret:"fdsfrrrwtt12321245a"
 };
 
 app.stackPush('all','/red')

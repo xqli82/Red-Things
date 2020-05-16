@@ -1,4 +1,5 @@
-const mongoose = require('./db')
+const db= require('./db')
+const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
@@ -23,5 +24,5 @@ const Group = mongoose.model('Group', groupSchema)
 module.exports = {
   User,
   Group,
-  mongoose
+  db
 }

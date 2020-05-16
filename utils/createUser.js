@@ -1,4 +1,4 @@
-const { User, mongoose } = require('../models')
+const { User } = require('../models')
 const { createPassword } = require('../api/bcrypt')
 const  userSettings = require('../user_settings')
 
@@ -9,7 +9,6 @@ setTimeout(async () => {
     console.log(`your message is ::\n username:${username}\n password:${password}\n supper:${supper}`)
     if (!(username && password)) {
         console.log('Please input right message')
-        mongoose.disconnect()
         return
     }
     let user = await User.create({
@@ -18,6 +17,5 @@ setTimeout(async () => {
         supper:supper
     })
     console.log(user)
-    mongoose.disconnect()
 }, 2000)
 

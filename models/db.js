@@ -30,4 +30,4 @@ db.once('open', function () {
   console.log('start to user mongodb...')
 })
 
-module.exports = mongoose
+module.exports = db

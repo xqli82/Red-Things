@@ -58,7 +58,7 @@ you will see the login page
 + /api    node-red http interface
 
 # RedFunction
-define yourself function, add export it;
+define yourself function,and export it;
 
 you can use global.get('function name') to get the function in node-red, then you can use it!
 

@@ -57,6 +57,33 @@ you will see the login page
 + /red    node-red editor
 + /api    node-red http interface
 
+# RedFunction
+define yourself function, add export it;
+
+you can use global.get('function name') to get the function in node-red, then you can use it!
+
+example:
+```
+//testFun.js
+module.exports=function(){
+    console.log('test function is running-----------');
+}
+
+//export module
+// RedFunction/index.js
+module.exports={
+    testFun
+}
+
+//in node-red
+//get it
+const testFun= global.get('testFun');
+//use it
+testFun();
+```
+
+
+
 # www.v5w.com
 more information in my website: www.v5w.com(威武网)
 

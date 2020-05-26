@@ -625,5 +625,8 @@
     }
    }
   }
+ },
+ "projects": {
+  "projects": {}
  }
 }

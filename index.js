@@ -7,6 +7,7 @@ const { auth, log } = require('./middleware')
 const cookies = require('cookie-parser')
 const userSettings = require('./user_settings')
 const stackPush = require('./utils/pushParser')
+const redFunction = require('./RedFunction')
 
 const app = express()
 
@@ -51,7 +52,7 @@ let settings = {
   httpNodeRoot: "/api",
   userDir: nodePath,
   ui: { path: '/ui' },
-  functionGlobalContext: {},    // enables global context
+  functionGlobalContext: redFunction,    // enables global context
   credentialSecret: "fdsfrrrwtt12321245a"
 };
 
@@ -61,7 +62,7 @@ app.stackPush('all', '/api')
 // Initialise the runtime with a server and settings
 RED.init(server, settings);
 
-RED.auth=function(req,res,next){
+RED.auth = function (req, res, next) {
   console.log('red auth-------------')
   next()
 }

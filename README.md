@@ -53,7 +53,8 @@ you will see the login page
 
 # Interface
 + /login  all url's entry
-+ /main   the main dashboard
++ /admin  admin url
++ /client client url
 + /red    node-red editor
 + /api    node-red http interface
 

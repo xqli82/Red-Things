@@ -14,7 +14,8 @@ const actions = {
         .then(res=>{
             commit('setGroups',res.data)
         })
-    }
+    },
+
 }
 
 export default {

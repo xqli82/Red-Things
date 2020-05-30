@@ -395,7 +395,7 @@
   },
   "node-red-dashboard": {
    "name": "node-red-dashboard",
-   "version": "2.21.0",
+   "version": "2.22.1",
    "local": true,
    "nodes": {
     "ui_base": {
@@ -620,13 +620,9 @@
      "view-grid-size": 20,
      "view-node-status": true,
      "view-node-show-label": true,
-     "view-show-tips": false
+     "view-show-tips": true
     }
-   },
-   "menu-menu-item-sidebar": false
+   }
   }
- },
- "projects": {
-  "projects": {}
  }
 }

@@ -83,7 +83,7 @@
             updateUser() {
                 this.editShow=false
                 this.$store.dispatch('user/updateUser',{app:this,user:this.user})
-            }
+            },
         },
     }
 </script>

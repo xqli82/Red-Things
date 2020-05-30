@@ -4,6 +4,6 @@
     "version": "0.0.1",
     "private": true,
     "dependencies": {
-        "node-red-dashboard": "~2.21.0"
+        "node-red-dashboard": "~2.22.1"
     }
 }

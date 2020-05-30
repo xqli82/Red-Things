@@ -1,11 +1,9 @@
 import axios from 'axios'
 import { Message } from 'element-ui'
-import userSettings from '../settings'
 
 
 // create an axios instance
 const service = axios.create({
-    baseURL: userSettings.serverUrl,
     timeout: 3000 // request timeout
 })
 

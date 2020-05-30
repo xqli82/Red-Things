@@ -15,11 +15,12 @@ app.stack = []
 app.stackPush = stackPush
 
 app.baseDir = __dirname
+
 //static files
 app.use('/static', express.static("public"))
-app.use('/vue', express.static("vue-html/dist/vue"))
-app.use('/sa', express.static("admin/dist/sa"))  //static-admin
-// app.use('/sc', express.static("admin/dist/sc"))  //static-client
+// app.use('/vue', express.static("vue-html/dist/vue")) //old url , not use
+app.use('/sa', express.static("admin/dist/sa"))  //static-admin 未来的功能扩展-管理员端
+// app.use('/sc', express.static("admin/dist/sc"))  //static-client 未来的功能扩展-客户端
 
 // view engine setup
 app.engine('html', require('express-art-template'));
@@ -36,9 +37,9 @@ app.use(cookies())
 app.use(auth)
 app.use(log)
 
-app.use('/main', express.static("vue-html/dist/index.html"))
+// app.use('/main', express.static("vue-html/dist/index.html")) //old url,not use
 app.use('/admin', express.static("admin/dist/index.html"))
-app.use('/client', express.static("client/dist/index.html"))
+// app.use('/client', express.static("client/dist/index.html"))
 
 routes(app)
 
@@ -53,7 +54,7 @@ let settings = {
   userDir: nodePath,
   ui: { path: '/ui' },
   functionGlobalContext: redFunction,    // enables global context
-  credentialSecret: "fdsfrrrwtt12321245a"
+  credentialSecret: "fdsfrrrwtta"
 };
 
 app.stackPush('all', '/red')
@@ -62,10 +63,6 @@ app.stackPush('all', '/api')
 // Initialise the runtime with a server and settings
 RED.init(server, settings);
 
-RED.auth = function (req, res, next) {
-  console.log('red auth-------------')
-  next()
-}
 // Serve the editor UI from /red
 app.use(settings.httpAdminRoot, RED.httpAdmin);
 

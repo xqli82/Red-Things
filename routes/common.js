@@ -9,6 +9,7 @@ commonRouter.get('/login', function (req, res) {
 
 commonRouter.get('/stack',function(req,res){
     res.send({
+        code:200,
         stack:req.app.stack
     })
 })

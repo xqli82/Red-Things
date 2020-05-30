@@ -1,11 +1,9 @@
 import axios from 'axios'
 import { Message } from 'element-ui'
-// import store from '@/store'
 
 // create an axios instance
 const service = axios.create({
-//   baseURL: process.env.VUE_APP_BASE_API, 
-
+  // baseURL: baseURL, 
   timeout: 3000 // request timeout
 })
 
@@ -18,7 +16,6 @@ service.interceptors.request.use(
     return config
   },
   error => {
-    // do something with request error
     console.log(error) // for debug
   }
 )

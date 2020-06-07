@@ -3,7 +3,7 @@ const http = require('http')
 const RED = require('node-red');
 const path = require('path')
 const routes = require('./routes')
-const { auth, log } = require('./middleware')
+const { auth, log,permission } = require('./middleware')
 const cookies = require('cookie-parser')
 const userSettings = require('./user_settings')
 const stackPush = require('./utils/pushParser')
@@ -35,7 +35,8 @@ app.use(express.json())
 app.use(cookies())
 
 app.use(auth)
-app.use(log)
+// app.use(log)
+app.use(permission)
 
 // app.use('/main', express.static("vue-html/dist/index.html")) //old url,not use
 app.use('/admin', express.static("admin/dist/index.html"))
@@ -59,6 +60,7 @@ let settings = {
 
 app.stackPush('all', '/red')
 app.stackPush('all', '/api')
+app.stackPush('all', '/admin')
 
 // Initialise the runtime with a server and settings
 RED.init(server, settings);

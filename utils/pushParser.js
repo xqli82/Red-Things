@@ -1,5 +1,5 @@
 module.exports = function(method,url){
-    const methods = ['get','post','delete','put']
+    const methods = ['GET','POST','DELETE','PUT']
     if(method ==='all'){
         methods.forEach(item=>{
             this.stack.push({

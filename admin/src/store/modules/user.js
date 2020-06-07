@@ -1,7 +1,5 @@
 const state = {
-    userList: [
-        { username: 'test', nickname: 'ssss', _id: 123131312321, group: 'Group1' }
-    ]
+    userList: []
 }
 
 const mutations = {

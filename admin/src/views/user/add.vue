@@ -14,8 +14,8 @@
                 </el-form-item>
                 <el-form-item label="用户组：">
                     <el-select v-model="user.group" placeholder="用户组">
-                        <el-option v-for="(item,index) in this.$store.getters.groups" :key="index" :label="item"
-                            :value="item">
+                        <el-option v-for="(item,index) in this.$store.getters.groups" :key="index" :label="item.name"
+                            :value="item._id">
                         </el-option>
                     </el-select>
                 </el-form-item>

@@ -5,8 +5,7 @@ const  userSettings = require('../user_settings')
 setTimeout(async () => {
     let username = process.argv[2]
     let password = process.argv[3]
-    let supper = true
-    console.log(`your message is ::\n username:${username}\n password:${password}\n supper:${supper}`)
+    console.log(`your message is ::\n username:${username}\n password:${password}\n super:true`)
     if (!(username && password)) {
         console.log('Please input right message')
         return
@@ -14,7 +13,7 @@ setTimeout(async () => {
     let user = await User.create({
         username:username,
         password:createPassword(password,userSettings.bcrypt_salt),
-        supper:supper
+        super: true
     })
     console.log(user)
 }, 2000)
